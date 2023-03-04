@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,100;1,200&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+:root{
+	--BLUE: dodgerblue;
+	--WHITE: #fff;
+	--GREY: #aaaaaa;
+	--RED: #ed3833;
+	--GREEN: #00bd56;
+	--GRAY:#eeeeee;
+	--BLACK: #000;
+}
+
+body{
+	/*Remember to add the google font link on the first line*/
+	font-family: 'Montserrat', sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	overflow: hidden;
+	padding: auto;
+	background: linear-gradient(dodgerblue, blue);
+}
+
+/*Background Animation*/
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+.main-container{
+	margin-top: 10vh;
+	max-width: 500px;
+	background-color: var(--GRAY);
+	padding: 2rem 1rem;
+	border: 2px solid #dddddd;
+	z-index: 2;
+}
+
+#howtobtn{
+	margin-bottom: 1rem;
+	padding: 0.5rem;
+	background-color: black;
+	color: white;
+	max-width: 75px;
+	cursor: pointer;
+	white-space: nowrap;
+}
+
+#howtobtn:hover{
+	opacity: 0.7;
+}
+
+.input{
+	width: 100%;
+}
+
+.input input{
+	width: 100%;
+	height: 2.5rem;
+	padding: 0.5rem;
+	font: inherit;
+	font-size: 1.1rem;
+	margin: 0.5rem auto;
+	background-color: var(--WHITE);
+	outline: none;
+	border: transparent;
+}
+
+#check{
+	width: 100%;
+	padding: 0.9rem 0.5rem;
+	text-align: center;
+	color: var(--WHITE);
+	height: 3rem;
+	background-color: var(--BLUE);
+	margin: 0.5rem auto;
+	cursor: pointer;
+}
+
+#check:hover{
+	background-color: #0a71d5;
+}
+
+.action-btns{
+	width: 100%;
+	color: var(--WHITE);
+	margin-top: 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.decrypt-btn, .encrypt-btn{
+	width: 45%;
+	padding: 0.7rem 0.5rem;
+	text-align: center;
+	height: 2.5rem;
+	cursor: pointer;
+}
+
+.encrypt-btn{
+	background-color: var(--RED);
+}
+
+.encrypt-btn:hover{
+	background-color: #e1201b;
+}
+
+.decrypt-btn{
+	background-color: var(--GREEN);
+}
+
+.decrypt-btn:hover{
+	background-color: #06df69;
+}
+
+.output{
+	width: 100%;
+	background-color: var(--WHITE);
+	height: 6rem;
+	overflow-y: scroll;
+	overflow-wrap: break-word;
+	padding: 0.5rem;
+	color: var(--BLACK);
+	position: relative;
+}
+
+#copy{
+
+	font-size: 0.8rem;
+	font-weight: bolder;
+	cursor: pointer;
+	color: var(--WHITE);
+	padding: 5px 5px;
+	background-color: #8b8989;
+	max-width: 50px;
+}
+
+#copy:hover{
+	background-color: #686868;
+}
+
+#reset-btn{
+	width: 100%;
+	padding: 0.7rem 0.5rem;
+	text-align: center;
+	height: 2.5rem;
+	background-color: var(--GREY);
+	margin-top: 2rem;
+	color: var(--WHITE);
+	cursor: pointer;
+}
+
+#reset-btn:hover{
+	background-color: #525151;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content ul li{
+	padding-top: 0.5rem;
+	list-style-type: none;
+	color: #0d47a1;
+}
+
+/* The Close Button */
+.close {
+  color: var(--RED);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#copyrights{
+	text-align: center;
+	padding-top: 0.5rem;
+}
+
+#copyrights a{
+	color: var(--RED);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#copyrights a:hover{
+	opacity: 0.7;
+}
+
+/*Making the webpage responsive on all devices*/
+
+@media screen and (max-width: 500px){
+	.main-container{
+		margin-top: 5vh;
+	}
+}
+
+@media screen and (max-height: 470px){
+	.main-container{
+		margin-top: 1vh;
+		padding: 0.5rem;
+	}
+
+	#howtobtn{
+		padding: 0.2rem;
+		text-align: center;
+	}
+
+	#check	{
+		height: 2rem;
+		padding: 0.3rem;
+	}
+
+	.decrypt-btn, .encrypt-btn, #reset-btn{
+		height: 2rem;
+		padding: 0.4rem;
+	}
+
+	#reset-btn{
+		margin-top: 1rem;
+	}
+}
+
+@media screen and (min-width: 800px){
+	.main-container{
+		width: 600px;
+	}

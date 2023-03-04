@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Message Encryption tool</title>
+	<link rel="shortcut icon" type="x-icon" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+  <script src="https://kit.fontawesome.com/ac97327f06.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="main-container">
+		<!-- <p id="howtobtn">How To</p> -->
+		<!-- <h1>Message Encryption tool</h1> -->
+		<p class="general-p">Type or paste in your message</p>
+		<div class="input">
+			<input type="text" id="type-message" spellcheck="false" autocomplete="false">
+		</div>
+
+		<div id="check" onclick="check()" title="Check if your input will be able to be encrypted/decrypted">
+			How To & More
+		</div>
+
+			<div class="output">
+			<p id="output-text"></p>
+		</div>
+		<p id="copy" onclick="copy()" title="Copy the final result">COPY</p>
+
+		<div class="action-btns">
+			<div class="encrypt-btn" id="ecBtn" onclick="encrypt()">Encrypt</div>
+			<div class="decrypt-btn" onclick="decrypt()">Decrypt</div>
+		</div>
+
+		<div id="reset-btn" onclick="reset()">RESET</div>
+  <p id="copyrights">Created by <a href="https://mohammedawaldev.netlify.app">Mohammed Awal Dev</a></p>
+<!-- Finally, let's create a modal to popup message from the compatibility check button -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <ul>
+    	<li><b>Do not include</b> digits in your message for the system will not process it</li>
+    	<li><b>Do not</b> enter confidential informations here such as credit card details.</li>
+    </ul>
+    <hr>
+    <p style="font-weight: bold; padding-top: 0.5rem; color: red;">How To Use</p>
+    <ul>
+    	<li>Enter your message in the first space provided</li>
+    	<li>Click on the <b>ENCRYPT</b> button (red button) to encrypt the message</li>
+    	<li>Click on the <b>Copy</b> button below the displayed output to copy the encrypted text.</li>
+    	<li>The receiver will also paste the encrypted text in the space provided and click on the <b>DECRYPT</b> button (green button) to reveal the actual text</li>
+    	<li>You can also click on the <b>RESET</b> button to reset to clear recent texts</li>
+    </ul>
+  </div>
+
+</div>
+
+
+	</div>
+	<script src="index.js"></script>
+</body>
+</html>
