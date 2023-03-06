@@ -3,8 +3,8 @@ let result = document.getElementById("output-text");
 
 // Working on the reset button set everything to an empty string when clicked
 function reset(){
-	rawInput.value = " ";
-	result.innerHTML = " ";
+	rawInput.value = "";
+	result.innerHTML = "";
 }
 
 // This is the function of the copy button
